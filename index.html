@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>City Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📚 City Library</h1>
+    <p>Manage books easily</p>
+  </header>
+
+  <main class="grid">
+
+    <!-- Add Book -->
+    <section class="card">
+      <h2>Add Book</h2>
+      <input id="bookId" type="number" placeholder="Book ID">
+      <input id="title" type="text" placeholder="Title">
+      <input id="author" type="text" placeholder="Author">
+      <input id="price" type="number" placeholder="Price">
+      <button onclick="addBook()">Add Book</button>
+    </section>
+
+    <!-- Search -->
+    <section class="card">
+      <h2>Search Book</h2>
+      <input id="searchTitle" type="text" placeholder="Search by Title">
+      <button onclick="searchByTitle()">Search</button>
+
+      <input id="searchAuthor" type="text" placeholder="Search by Author">
+      <button onclick="searchByAuthor()">Search</button>
+    </section>
+
+    <!-- Rent / Return -->
+    <section class="card">
+      <h2>Rent / Return</h2>
+      <input id="rentId" type="number" placeholder="Book ID">
+      <div class="btn-group">
+        <button onclick="rentBook()">Rent</button>
+        <button class="secondary" onclick="returnBook()">Return</button>
+      </div>
+    </section>
+
+    <!-- View -->
+    <section class="card">
+      <h2>View Books</h2>
+      <button onclick="showAvailable()">Available Books</button>
+      <button class="secondary" onclick="showRented()">Rented Books</button>
+    </section>
+
+  </main>
+
+  <!-- Output -->
+  <section class="output-card">
+    <h2>Output</h2>
+    <div id="output">No actions yet</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
